@@ -1,5 +1,3 @@
-# Imersão Fullcycle 9 - Codebank
-
 ## Ordem recomendada de execução
 
 * Apache Kafka

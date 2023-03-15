@@ -1,6 +1,6 @@
 [<img src="../img/nestjs.svg" width="72"/>](Nest.js)
 
-# Imersão Full Stack & FullCycle 9.0 - Codebank - Back-end das faturas
+# Imersão Full Stack & FullCycle 3.0 - Codebank - Back-end das faturas
 
 ## Descrição
 
@@ -31,6 +31,6 @@ Acessar http://localhost:3002/credit-cards.
 
 ### Para Windows 
 
-Lembrar de instalar o WSL2 e Docker. Vejo o vídeo: [https://www.youtube.com/watch?v=On_nwfkiSAE](https://www.youtube.com/watch?v=On_nwfkiSAE) 
+Lembrar de instalar o WSL2 e Docker. Vejo o vídeo: [https://www.youtube.com/watch?v=j6ioaes03oY](https://www.youtube.com/watch?v=j6ioaes03oY) 
 
 Siga o guia rápido de instalação: [https://github.com/codeedu/wsl2-docker-quickstart](https://github.com/codeedu/wsl2-docker-quickstart) 

@@ -21,12 +21,12 @@ services:
     tty: true
     volumes:
       - ./.docker/dbdata:/var/lib/postgresql/data
-    #   - ./.docker/postgres:/docker-entrypoint-initdb.d
-    #ports: 
-    #  - 5432:5432
+      - ./.docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports: 
+      - 5432:5432
     environment:
       - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=store
+      #- POSTGRES_DB=store
 
   pgadmin:
     image: dpage/pgadmin4
