@@ -27,7 +27,7 @@
   * Solução: Usado o Kafka Connect que também consumirá os dados de cada transação e 
     fará a inserção no Elasticsearch.
 
-!.[Dinamica].(https://cdn.discordapp.com/attachments/1074644534748794891/1086270565372923974/codebank.png)    
+![Dinamica](https://cdn.discordapp.com/attachments/1074644534748794891/1086270565372923974/codebank.png)    
 
 ## Ordem recomendada de execução
 - Usado docker-compose:
