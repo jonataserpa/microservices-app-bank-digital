@@ -36,14 +36,16 @@
     * Back-end e front-end da loja (Nest.js e Next.js e REST)
     * Back-end e front-end das faturas (Nest.js e Next.js e REST)
 
-![Tela de Produtos](https://cdn.discordapp.com/attachments/1083115321935798314/1093547227395407873/Capturar_select-area_20230406114457.png)
+![Tela de Produtos](https://cdn.discordapp.com/attachments/1083115321935798314/1093598174725283950/Capturar_select-area_20230406150628.png)
 
-![Detalhe do Produto](https://cdn.discordapp.com/attachments/1083115321935798314/1093547227697385492/Capturar_select-area_20230406114445.png)
+![Detalhe do Produto](https://cdn.discordapp.com/attachments/1083115321935798314/1093598175253778522/Capturar_select-area_20230406150720.png)
 
 
-![Checkout](https://cdn.discordapp.com/attachments/1083115321935798314/1093547227949060127/Capturar_select-area_20230406114414.png)
+![Checkout](https://cdn.discordapp.com/attachments/1083115321935798314/1093598175593496597/Capturar_select-area_20230406150745.png)
 
-![Compra finalizada](https://cdn.discordapp.com/attachments/1083115321935798314/1093547228188131469/Capturar_select-area_20230406114401.png)
+![Compra finalizada](https://cdn.discordapp.com/attachments/1083115321935798314/1093598175991963678/Capturar_select-area_20230406150803.png)
+
+![Fatura](https://cdn.discordapp.com/attachments/1083115321935798314/1093596528804896808/Capturar_select-area_20230406150152.png)
 
 
 # Imersão Fullcycle
