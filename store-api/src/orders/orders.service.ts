@@ -38,6 +38,7 @@ export class OrdersService {
 
     try {
       const newOrder = await queryRunner.manager.save(order);
+      console.log('products: ', products);
       await this.paymentService.payment({
         creditCard: {
           name: order.credit_card.name,

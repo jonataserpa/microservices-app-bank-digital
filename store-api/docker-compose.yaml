@@ -1,18 +1,20 @@
 version: '3'
 
 services:
-  app:
+  appstoreapi:
     build: .
     entrypoint: dockerize -wait tcp://db:5432 -timeout 40s ./.docker/entrypoint.sh
-    container_name: imersao-fullcycle-3-store-api-app
+    container_name: imersao-fullcycle-3-store-api-app-store
     ports:
       - 3000:3000
     volumes:
       - .:/home/node/app
     depends_on: 
       - db
-    extra_hosts: 
-        - 'host.docker.internal:172.17.0.1'
+    networks:
+      - code-bank  
+    #extra_hosts: 
+    #  - 'host.docker.internal:172.17.0.1'
 
   db:
     build: .docker/postgres
@@ -27,6 +29,8 @@ services:
     environment:
       - POSTGRES_PASSWORD=root
       #- POSTGRES_DB=store
+    networks:
+      - code-bank   
 
   pgadmin:
     image: dpage/pgadmin4
@@ -37,3 +41,9 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=123456
     ports:
       - 9000:80
+    networks:
+      - code-bank  
+
+networks:
+  code-bank:
+    external: true
