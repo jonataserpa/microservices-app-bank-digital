@@ -3,6 +3,8 @@ package repository
 import (
 	"database/sql"
 	"errors"
+	"fmt"
+
 	"github.com/codeedu/codebank/domain"
 )
 
@@ -15,7 +17,7 @@ func NewTransactionRepositoryDb(db *sql.DB) *TransactionRepositoryDb {
 }
 
 func (t *TransactionRepositoryDb) SaveTransaction(transaction domain.Transaction, creditCard domain.CreditCard) error {
-	stmt, err := t.db.Prepare( `insert into transactions(id, credit_card_id, amount, status, description, store, created_at)
+	stmt, err := t.db.Prepare(`insert into transactions(id, credit_card_id, amount, status, description, store, created_at)
 								values($1, $2, $3, $4, $5, $6, $7)`)
 	if err != nil {
 		return err
@@ -27,7 +29,7 @@ func (t *TransactionRepositoryDb) SaveTransaction(transaction domain.Transaction
 		transaction.Status,
 		transaction.Description,
 		transaction.Store,
-		transaction.CreatedAt, 
+		transaction.CreatedAt,
 	)
 	if err != nil {
 		return err
@@ -86,6 +88,7 @@ func (t *TransactionRepositoryDb) GetCreditCard(creditCard domain.CreditCard) (d
 	if err != nil {
 		return c, err
 	}
+	fmt.Println("creditCard: ", creditCard.Number)
 	if err = stmt.QueryRow(creditCard.Number).Scan(&c.ID, &c.Balance, &c.Limit); err != nil {
 		return c, errors.New("credit card does not exists")
 	}

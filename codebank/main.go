@@ -3,14 +3,15 @@ package main
 import (
 	"database/sql"
 	"fmt"
+	"log"
+	"os"
+
 	"github.com/codeedu/codebank/infrastructure/grpc/server"
 	"github.com/codeedu/codebank/infrastructure/kafka"
 	"github.com/codeedu/codebank/infrastructure/repository"
 	"github.com/codeedu/codebank/usecase"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
-	"log"
-	"os"
 )
 
 func init() {

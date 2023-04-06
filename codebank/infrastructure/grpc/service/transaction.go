@@ -2,6 +2,8 @@ package service
 
 import (
 	"context"
+	"fmt"
+
 	"github.com/codeedu/codebank/dto"
 	"github.com/codeedu/codebank/infrastructure/grpc/pb"
 	"github.com/codeedu/codebank/usecase"
@@ -20,16 +22,18 @@ func NewTransactionService() *TransactionService {
 }
 
 func (t *TransactionService) Payment(ctx context.Context, in *pb.PaymentRequest) (*empty.Empty, error) {
+	fmt.Println("Payment: ", in.CreditCard.GetNumber())
 	transactionDto := dto.Transaction{
-		Name: in.GetCreditCard().GetName(),
-		Number: in.CreditCard.GetNumber(),
+		Name:            in.GetCreditCard().GetName(),
+		Number:          in.CreditCard.GetNumber(),
 		ExpirationMonth: in.GetCreditCard().GetExpirationMonth(),
-		ExpirationYear: in.GetCreditCard().GetExpirationYear(),
-		CVV: in.GetCreditCard().GetCvv(),
-		Amount: in.GetAmount(),
-		Store: in.GetStore(),
-		Description: in.GetDescription(),
+		ExpirationYear:  in.GetCreditCard().GetExpirationYear(),
+		CVV:             in.GetCreditCard().GetCvv(),
+		Amount:          in.GetAmount(),
+		Store:           in.GetStore(),
+		Description:     in.GetDescription(),
 	}
+	fmt.Println("transactionDto: ", transactionDto)
 	transaction, err := t.ProcessTransactionUseCase.ProcessTransaction(transactionDto)
 	if err != nil {
 		return &empty.Empty{}, status.Error(codes.FailedPrecondition, err.Error())
