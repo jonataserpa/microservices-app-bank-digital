@@ -36,6 +36,15 @@
     * Back-end e front-end da loja (Nest.js e Next.js e REST)
     * Back-end e front-end das faturas (Nest.js e Next.js e REST)
 
+![Tela de Produtos](https://cdn.discordapp.com/attachments/1083115321935798314/1093547227395407873/Capturar_select-area_20230406114457.png)
+
+![Detalhe do Produto](https://cdn.discordapp.com/attachments/1083115321935798314/1093547227697385492/Capturar_select-area_20230406114445.png)
+
+
+![Checkout](https://cdn.discordapp.com/attachments/1083115321935798314/1093547227949060127/Capturar_select-area_20230406114414.png)
+
+![Compra finalizada](https://cdn.discordapp.com/attachments/1083115321935798314/1093547228188131469/Capturar_select-area_20230406114401.png)
+
 
 # Imersão Fullcycle
 Essa imersão foi realizada com o time fullcycle.
