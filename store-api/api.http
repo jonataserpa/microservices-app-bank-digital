@@ -45,12 +45,12 @@ Content-Type: application/json
       "name": "Jonata",
       "expiration_month": 10,
       "expiration_year": 2024,
-      "cvv": 456
+      "cvv": "456"
     },
        "items":  [
       {
           "quantity": 1, 
-          "product_id": "000e8450-0ea0-4745-a3ad-bec50734846a"
+          "product_id": "fc822526-38dc-4894-93b6-5cca31533f44"
       }
    ]
 }

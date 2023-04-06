@@ -9,6 +9,7 @@ export class InvoicesController {
 
   @MessagePattern('payments')
   create(@Payload(new ValidationPipe()) message: KafkaCreateInvoiceDto) {
+    console.log("payments: ", message);
     return this.invoicesService.create(message.value);
   }
 
