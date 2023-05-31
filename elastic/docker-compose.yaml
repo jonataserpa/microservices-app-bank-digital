@@ -100,12 +100,12 @@ services:
       - "host.docker.internal:172.17.0.1"
 
   es01:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.2
+    image: elasticsearch:7.9.2
     container_name: es01
     environment:
       - node.name=es01
-      - node.store.allow_mmap=false
       - cluster.name=es-docker-cluster
+      - discovery.seed_hosts=es01,
       - cluster.initial_master_nodes=es01
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
@@ -113,15 +113,15 @@ services:
       memlock:
         soft: -1
         hard: -1
-    volumes:
-      - ./es01:/usr/share/elasticsearch/data
+    #volumes:
+    #  - ./es01:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
     extra_hosts:
-      - "host.docker.internal:172.17.0.1"  
-
+      - "host.docker.internal:172.17.0.1"
+  
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.11.2
+    image: kibana:7.9.2
     container_name: kib01
     ports:
       - 5601:5601
